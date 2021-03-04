@@ -6,10 +6,49 @@ public interface IBeverage{
     string CupType { get; }
     IBeverage AddIngredient(Ingredient newIngredient);
 
-    public IBeverage WhatIsThis();
+    public IBeverage ServeBeverage();
 
 }
+public class Ingredient
+{
+    public Ingredient(int amount, string type)
+    {
+        Amount = amount;
+        Type = type;
+    }
+    public int Amount { get; set; }
+    public string Type { get; set; }
+}
 
+class Beverage : IBeverage
+{
+    public List<Ingredient> Ingredients { get; set; }
+
+    public string CupType => throw new NotImplementedException();
+    private string Name { get; set; }
+    public Beverage(string name)
+    {
+        Name = name;
+        Ingredients = new List<Ingredient>();
+    }
+
+    public IBeverage AddIngredient(Ingredient newIngredient)
+    {
+        this.Ingredients.Add(newIngredient);
+        return this;
+    }
+
+    public IBeverage ServeBeverage()
+    {
+        Console.WriteLine($"A cup of {this.Name}.");
+        foreach (Ingredient ingredient in Ingredients)
+        {
+            Console.WriteLine($"\twith some {ingredient.Amount} of the {ingredient.Type}");
+        }
+        return this;
+    }
+}
+/*
 class GreenTea : IBeverage
 {
     public List<Ingredient> Ingredients { get; set; }
@@ -95,13 +134,4 @@ class Coffee : IBeverage
     }
 }
 
-public class Ingredient
-{
-    public Ingredient(int amount, string type)
-    {
-        Amount = amount;
-        Type = type;
-    }
-    public int Amount { get; set; }
-    public string Type { get; set; }
-}
+*/
