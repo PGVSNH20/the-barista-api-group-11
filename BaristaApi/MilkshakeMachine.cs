@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaristaApi
 {
-    class MilkshakeMachine
+    public class MilkshakeMachine
     {
           
          public Beverage beverage;

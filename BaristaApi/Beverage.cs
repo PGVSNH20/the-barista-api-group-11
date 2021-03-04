@@ -20,7 +20,7 @@ public class Ingredient
     public string Type { get; set; }
 }
 
-class Beverage : IBeverage
+public class Beverage : IBeverage
 {
     public List<Ingredient> Ingredients { get; set; }
 

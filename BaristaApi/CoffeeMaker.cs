@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaristaApi
 {
-    class CoffeeMaker
+    public class CoffeeMaker
     {
         public Beverage beverage;
         public CoffeeMaker StartBrewingCoffee()
