@@ -8,7 +8,7 @@ namespace BaristaApi
         {
             IBeverage cupOfJuice = new Beverage("Apple Juice");
 
-            cupOfJuice.AddIngredient(new (20, "water"))
+            cupOfJuice = cupOfJuice.AddIngredient(new (20, "water"))
                 .AddIngredient(new (5, "apple")).ServeBeverage();
 
             IBeverage cupOfCoffee = new Beverage("Coffee")
