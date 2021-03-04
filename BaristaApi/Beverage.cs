@@ -24,7 +24,7 @@ class Beverage : IBeverage
 {
     public List<Ingredient> Ingredients { get; set; }
 
-    public string CupType => throw new NotImplementedException();
+    public string CupType => this.Name;
     private string Name { get; set; }
     public Beverage(string name)
     {

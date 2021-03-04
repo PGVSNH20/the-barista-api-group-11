@@ -23,6 +23,31 @@ namespace BaristaApi
                                     .AddIngredient(new (5, "milk"))
                                     .AddIngredient(new (500, "sugar"))
                                     .ServeBeverage();
+
+            CoffeeMaker newCoffeMaker = new CoffeeMaker();
+            Beverage newCoffee = newCoffeMaker
+                                    .StartBrewingCoffee()
+                                    .AddWater()
+                                    .AddBeans()
+                                    .AddALittleBitOfMilk()
+                                    .FinishBrewing();
+            
+            JuicePress newJuicePress = new JuicePress();
+            Beverage newGlassOfJuice = newJuicePress
+                                        .StartMixingJuice()
+                                        .AddApple()
+                                        .AddOrange()
+                                        .AddALittleBitOfWater()
+                                        .AddIce()
+                                        .FinishMixing();
+
+            MilkshakeMachine newMilkshakeMachine = new MilkshakeMachine();
+            Beverage milkshakeMaster5000 = newMilkshakeMachine
+                                            .Shaker()
+                                            .AddIceCream("Chocolate")
+                                            .AddSyrup("Chocolate")
+                                            .AddSprinkles("Chocolate")
+                                            .FinishShaking();
             // Test push this
             /* pseudo-code
             Espresso espresso = new Espresso().AddWater(20).AddBeans(b => b.AmountInG = 5 && b.Sort = CoffeSorts.Robusta).ToBravage();
