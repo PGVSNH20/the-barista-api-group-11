@@ -7,7 +7,6 @@ public interface IBeverage{
     IBeverage AddIngredient(Ingredient newIngredient);
 
     public IBeverage ServeBeverage();
-
 }
 public class Ingredient
 {

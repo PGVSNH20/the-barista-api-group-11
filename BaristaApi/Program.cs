@@ -1,15 +1,13 @@
-﻿using System;
-
-namespace BaristaApi
+﻿namespace BaristaApi
 {
     class Program
     {
         static void Main(string[] args)
         {
             IBeverage cupOfJuice = new Beverage("Apple Juice");
-
             cupOfJuice = cupOfJuice.AddIngredient(new (20, "water"))
-                .AddIngredient(new (5, "apple")).ServeBeverage();
+                .AddIngredient(new (5, "apple"))
+                .ServeBeverage();
 
             IBeverage cupOfCoffee = new Beverage("Coffee")
                                     .AddIngredient(new (10, "Water"))
