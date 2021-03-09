@@ -49,9 +49,9 @@ namespace BaristaApi.Tests
                             .AddBeans()
                             .AddALotOfMilk()
                             .FinishBrewing();
-            Assert.True(beverage.Ingredients[2].Type.ToLower() == "milk");
+            Assert.Equal("milk", beverage.Ingredients[2].Type.ToLower());
         }
-
+        /*
         [Fact]
         public void Expect_Apple_In_Ingredients_When_Adding_Apple_To_Juice()
         {
@@ -73,5 +73,6 @@ namespace BaristaApi.Tests
             }
             Assert.True(containsApple);
         }
+        */          // Borttagen då man ska undvika onödig logik i sina tester.
     }
 }
